@@ -1,0 +1,933 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{54789697-7AE4-441F-8310-A20D4C12D494}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iMANTRA</RootNamespace>
+    <AssemblyName>iMANTRA</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CRVsPackageLib, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CRVsPackageLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="CUSTOM-iMANTRA">
+      <HintPath>..\..\CUSTOM-iMANTRA\CUSTOM-iMANTRA\bin\Debug\CUSTOM-iMANTRA.dll</HintPath>
+    </Reference>
+    <Reference Include="CUSTOM-iMANTRA-BL">
+      <HintPath>..\..\CUSTOM-iMANTRA\CUSTOM-iMANTRA-BL\bin\Debug\CUSTOM-iMANTRA-BL.dll</HintPath>
+    </Reference>
+    <Reference Include="infragistics.win.ultrawintabcontrol.v3, Version=3.0.20033.16, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Sharanamma\Desktop\infragistics.win.ultrawintabcontrol.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="INIFileParser, Version=1.7.1.0, Culture=neutral, PublicKeyToken=79af7b307b65cf3c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\iMANTRA_iniL\bin\Release\INIFileParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\..\iMANTRA\09.07.13\iMFG\iMFG\bin\Release\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="License, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\License\License\bin\Release\License.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Tasks.v4.0" />
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="ORG_LICENSE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WEB_LICENSE_deploy\Release\bin\ORG_LICENSE.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.Ribbon35">
+      <HintPath>..\..\..\..\..\..\DUMMY-PROJECT\Ribbon_10May2013\System.Windows.Forms.Ribbon35.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebToolKit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\WebToolKit\WebToolKit\bin\Debug\WebToolKit.dll</HintPath>
+    </Reference>
+    <Reference Include="WEB_LICENSE_deploy, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WEB_LICENSE_deploy\Release\bin\WEB_LICENSE_deploy.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bin\Release\frmShow_Out.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bin\Release\frmShow_Out.Designer.cs">
+      <DependentUpon>frmShow_Out.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccountAlloc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccountAlloc.designer.cs">
+      <DependentUpon>frmAccountAlloc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccountGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccountGroup.Designer.cs">
+      <DependentUpon>frmAccountGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDynamicAccountAlloc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDynamicAccountAlloc.designer.cs">
+      <DependentUpon>frmDynamicAccountAlloc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeMast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeMast.Designer.cs">
+      <DependentUpon>frmEmployeeMast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEventMast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEventMast.Designer.cs">
+      <DependentUpon>frmEventMast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFileMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFileMaster.Designer.cs">
+      <DependentUpon>frmFileMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGeneralLedger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGeneralLedger.Designer.cs">
+      <DependentUpon>frmGeneralLedger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenerateXML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenerateXML.designer.cs">
+      <DependentUpon>frmGenerateXML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLocate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocate.designer.cs">
+      <DependentUpon>frmLocate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNarration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNarration.Designer.cs">
+      <DependentUpon>frmNarration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmORGModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmORGModule.Designer.cs">
+      <DependentUpon>frmORGModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProjectMast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProjectMast.designer.cs">
+      <DependentUpon>frmProjectMast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProjectPlanning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProjectPlanning.Designer.cs">
+      <DependentUpon>frmProjectPlanning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefinedDGVTextBoxColumn.cs" />
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddl_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddl_Info.designer.cs">
+      <DependentUpon>frmAddl_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmApprove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmApprove.designer.cs">
+      <DependentUpon>frmApprove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBakUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBakUp.designer.cs">
+      <DependentUpon>frmBakUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePwd.designer.cs">
+      <DependentUpon>frmChangePwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmControlCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmControlCenter.designer.cs">
+      <DependentUpon>frmControlCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomerMast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerMast.Designer.cs">
+      <DependentUpon>frmCustomerMast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustPriceLst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustPriceLst.Designer.cs">
+      <DependentUpon>frmCustPriceLst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDCMast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDCMast.designer.cs">
+      <DependentUpon>frmDCMast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDebitEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDebitEntry.designer.cs">
+      <DependentUpon>frmDebitEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExtra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExtra.designer.cs">
+      <DependentUpon>frmExtra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListOfFields.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListOfFields.designer.cs">
+      <DependentUpon>frmListOfFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListOfMenus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListOfMenus.designer.cs">
+      <DependentUpon>frmListOfMenus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListOfUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListOfUsers.designer.cs">
+      <DependentUpon>frmListOfUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMachineMast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMachineMast.Designer.cs">
+      <DependentUpon>frmMachineMast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpeningDuty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpeningDuty.Designer.cs">
+      <DependentUpon>frmOpeningDuty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPickUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPickUp.designer.cs">
+      <DependentUpon>frmPickUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPopup.designer.cs">
+      <DependentUpon>frmPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrint.designer.cs">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintPreview.designer.cs">
+      <DependentUpon>frmPrintPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessMaster.Designer.cs">
+      <DependentUpon>frmProcessMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductGroupMast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductGroupMast.Designer.cs">
+      <DependentUpon>frmProductGroupMast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductMast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductMast.Designer.cs">
+      <DependentUpon>frmProductMast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQCCheckPoints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQCCheckPoints.Designer.cs">
+      <DependentUpon>frmQCCheckPoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportPreview.designer.cs">
+      <DependentUpon>frmReportPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRolesAndRights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRolesAndRights.designer.cs">
+      <DependentUpon>frmRolesAndRights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRolesMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRolesMapping.designer.cs">
+      <DependentUpon>frmRolesMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeries.Designer.cs">
+      <DependentUpon>frmSeries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShortCut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShortCut.Designer.cs">
+      <DependentUpon>frmShortCut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShow.Designer.cs">
+      <DependentUpon>frmShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStartUpPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStartUpPage.designer.cs">
+      <DependentUpon>frmStartUpPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSTMast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSTMast.designer.cs">
+      <DependentUpon>frmSTMast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsyntax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsyntax.designer.cs">
+      <DependentUpon>frmsyntax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTab.Designer.cs">
+      <DependentUpon>frmTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemeSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemeSetting.designer.cs">
+      <DependentUpon>frmThemeSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransactionSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransactionSetting.designer.cs">
+      <DependentUpon>frmTransactionSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserCreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserCreation.designer.cs">
+      <DependentUpon>frmUserCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVendorMast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendorMast.Designer.cs">
+      <DependentUpon>frmVendorMast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVendorPriceLst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendorPriceLst.Designer.cs">
+      <DependentUpon>frmVendorPriceLst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWarehouse.Designer.cs">
+      <DependentUpon>frmWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWO_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWO_List.Designer.cs">
+      <DependentUpon>frmWO_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_mainmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_mainmenu.designer.cs">
+      <DependentUpon>frm_mainmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_mast_item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_mast_item.designer.cs">
+      <DependentUpon>frm_mast_item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewCheckBoxColumn.cs" />
+    <Compile Include="Grouper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ifrm_Accounting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ifrm_Accounting.designer.cs">
+      <DependentUpon>ifrm_Accounting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ifrm_transaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ifrm_transaction.designer.cs">
+      <DependentUpon>ifrm_transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm.Designer.cs">
+      <DependentUpon>MyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="POPUPBUTTON_FOR_GRID.cs" />
+    <Compile Include="POPUPDATETIME_FOR_GRID.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="POPUPDECIMAL_FOR_GRID.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PopupTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="POPUPTEXTBOX_FOR_GRID.cs" />
+    <Compile Include="POPUP_GRID_DATETIME.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetFieldsValue.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="UcDGV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcDGV.Designer.cs">
+      <DependentUpon>UcDGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCToolBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCToolBar.designer.cs">
+      <DependentUpon>UCToolBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserDT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserDT.designer.cs">
+      <DependentUpon>UserDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VALIDATIONLAYER.cs" />
+    <EmbeddedResource Include="BaseClass.resx">
+      <DependentUpon>BaseClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Release\frmShow_Out.resx">
+      <DependentUpon>frmShow_Out.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAccountAlloc.resx">
+      <DependentUpon>frmAccountAlloc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAccountGroup.resx">
+      <DependentUpon>frmAccountGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDynamicAccountAlloc.resx">
+      <DependentUpon>frmDynamicAccountAlloc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeMast.resx">
+      <DependentUpon>frmEmployeeMast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEventMast.resx">
+      <DependentUpon>frmEventMast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFileMaster.resx">
+      <DependentUpon>frmFileMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGeneralLedger.resx">
+      <DependentUpon>frmGeneralLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenerateXML.resx">
+      <DependentUpon>frmGenerateXML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocate.resx">
+      <DependentUpon>frmLocate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNarration.resx">
+      <DependentUpon>frmNarration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmORGModule.resx">
+      <DependentUpon>frmORGModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProjectMast.resx">
+      <DependentUpon>frmProjectMast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProjectPlanning.resx">
+      <DependentUpon>frmProjectPlanning.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddl_Info.resx">
+      <DependentUpon>frmAddl_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmApprove.resx">
+      <DependentUpon>frmApprove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBakUp.resx">
+      <DependentUpon>frmBakUp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePwd.resx">
+      <DependentUpon>frmChangePwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmControlCenter.resx">
+      <DependentUpon>frmControlCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerMast.resx">
+      <DependentUpon>frmCustomerMast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustPriceLst.resx">
+      <DependentUpon>frmCustPriceLst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDCMast.resx">
+      <DependentUpon>frmDCMast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDebitEntry.resx">
+      <DependentUpon>frmDebitEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExtra.resx">
+      <DependentUpon>frmExtra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListOfFields.resx">
+      <DependentUpon>frmListOfFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListOfMenus.resx">
+      <DependentUpon>frmListOfMenus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListOfUsers.resx">
+      <DependentUpon>frmListOfUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMachineMast.resx">
+      <DependentUpon>frmMachineMast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpeningDuty.resx">
+      <DependentUpon>frmOpeningDuty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPickUp.resx">
+      <DependentUpon>frmPickUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPopup.resx">
+      <DependentUpon>frmPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrint.resx">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintPreview.resx">
+      <DependentUpon>frmPrintPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessMaster.resx">
+      <DependentUpon>frmProcessMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductGroupMast.resx">
+      <DependentUpon>frmProductGroupMast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductMast.resx">
+      <DependentUpon>frmProductMast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQCCheckPoints.resx">
+      <DependentUpon>frmQCCheckPoints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportPreview.resx">
+      <DependentUpon>frmReportPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRolesAndRights.resx">
+      <DependentUpon>frmRolesAndRights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRolesMapping.resx">
+      <DependentUpon>frmRolesMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeries.resx">
+      <DependentUpon>frmSeries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShortCut.resx">
+      <DependentUpon>frmShortCut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShow.resx">
+      <DependentUpon>frmShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStartUpPage.resx">
+      <DependentUpon>frmStartUpPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSTMast.resx">
+      <DependentUpon>frmSTMast.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsyntax.resx">
+      <DependentUpon>frmsyntax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTab.resx">
+      <DependentUpon>frmTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemeSetting.resx">
+      <DependentUpon>frmThemeSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransactionSetting.resx">
+      <DependentUpon>frmTransactionSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserCreation.resx">
+      <DependentUpon>frmUserCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendorMast.resx">
+      <DependentUpon>frmVendorMast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendorPriceLst.resx">
+      <DependentUpon>frmVendorPriceLst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWarehouse.resx">
+      <DependentUpon>frmWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWO_List.resx">
+      <DependentUpon>frmWO_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_mainmenu.resx">
+      <DependentUpon>frm_mainmenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_mast_item.resx">
+      <DependentUpon>frm_mast_item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grouper.resx">
+      <DependentUpon>Grouper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ifrm_Accounting.resx">
+      <DependentUpon>ifrm_Accounting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ifrm_transaction.resx">
+      <DependentUpon>ifrm_transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm.resx">
+      <DependentUpon>MyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UcDGV.resx">
+      <DependentUpon>UcDGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCToolBar.resx">
+      <DependentUpon>UCToolBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserDT.resx">
+      <DependentUpon>UserDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\CUSTOM-iMANTRA-BL.dll.PendingOverwrite" />
+    <None Include="bin\Debug\idart.ini" />
+    <None Include="bin\Debug\iMANTRA.exe.config" />
+    <None Include="bin\Debug\iMANTRA.vshost.exe.config" />
+    <None Include="bin\Debug\iMANTRA.vshost.exe.manifest" />
+    <None Include="bin\Debug\WebKitBrowser.dll.manifest" />
+    <None Include="bin\Release\idart.ini" />
+    <None Include="bin\Release\iMANTRA.exe.config" />
+    <None Include="bin\Release\iMANTRA.vshost.exe.config" />
+    <None Include="bin\Release\iMANTRA.vshost.exe.manifest" />
+    <None Include="bin\Release\InodeMFGFileSetting.ini" />
+    <None Include="bin\Release\Setting.ini" />
+    <None Include="bin\Release\WebKitBrowser.dll.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iMANTRA_BL\iMANTRA_BL.csproj">
+      <Project>{7F0C1A27-B162-4595-B350-9BED8DB37F58}</Project>
+      <Name>iMANTRA_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iMANTRA_DL\iMANTRA_DL.csproj">
+      <Project>{10A20E7D-0D4A-4EE9-96ED-8F5F9C2D4F7B}</Project>
+      <Name>iMANTRA_DL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iMANTRA_IL\iMANTRA_IL.csproj">
+      <Project>{1FE10F2E-50CD-46B8-8B59-2ABFE33545AB}</Project>
+      <Name>iMANTRA_IL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iMANTRA_iniL\iMANTRA_iniL.csproj">
+      <Project>{BCDCEF88-F4E7-48BF-BE63-65B61293FBC0}</Project>
+      <Name>iMANTRA_iniL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\CFLite.dll" />
+    <Content Include="bin\Debug\CUSTOM-iMANTRA-BL.dll" />
+    <Content Include="bin\Debug\CUSTOM-iMANTRA-BL.pdb" />
+    <Content Include="bin\Debug\CUSTOM-iMANTRA.dll" />
+    <Content Include="bin\Debug\CUSTOM-iMANTRA.pdb" />
+    <Content Include="bin\Debug\icudt40.dll" />
+    <Content Include="bin\Debug\icuin40.dll" />
+    <Content Include="bin\Debug\icuuc40.dll" />
+    <Content Include="bin\Debug\iDARTCOM.dll" />
+    <Content Include="bin\Debug\iDARTCOM.pdb" />
+    <Content Include="bin\Debug\iMANTRA.exe" />
+    <Content Include="bin\Debug\iMANTRA.pdb" />
+    <Content Include="bin\Debug\iMANTRA.vshost.exe" />
+    <Content Include="bin\Debug\iMANTRA_BL.dll" />
+    <Content Include="bin\Debug\iMANTRA_BL.pdb" />
+    <Content Include="bin\Debug\iMANTRA_iniL.dll" />
+    <Content Include="bin\Debug\iMANTRA_iniL.pdb" />
+    <Content Include="bin\Debug\infragistics.win.ultrawintabcontrol.v3.dll" />
+    <Content Include="bin\Debug\JavaScriptCore.dll" />
+    <Content Include="bin\Debug\libcurl.dll" />
+    <Content Include="bin\Debug\libeay32.dll" />
+    <Content Include="bin\Debug\libexslt.dll" />
+    <Content Include="bin\Debug\libxml2.dll" />
+    <Content Include="bin\Debug\libxslt.dll" />
+    <Content Include="bin\Debug\License.dll" />
+    <Content Include="bin\Debug\License.pdb" />
+    <Content Include="bin\Debug\objc.dll" />
+    <Content Include="bin\Debug\ORG_LICENSE.dll" />
+    <Content Include="bin\Debug\ORG_LICENSE.pdb" />
+    <Content Include="bin\Debug\pthreadVC2.dll" />
+    <Content Include="bin\Debug\SQLite3.dll" />
+    <Content Include="bin\Debug\ssleay32.dll" />
+    <Content Include="bin\Debug\WebKit.dll" />
+    <Content Include="bin\Debug\WebKit.Interop.dll" />
+    <Content Include="bin\Debug\WebKitBrowser.dll" />
+    <Content Include="bin\Debug\WebKitBrowserTest.exe" />
+    <Content Include="bin\Debug\WebToolKit.dll" />
+    <Content Include="bin\Debug\WebToolKit.pdb" />
+    <Content Include="bin\Debug\WEB_LICENSE_deploy.dll" />
+    <Content Include="bin\Release\CFLite.dll" />
+    <Content Include="bin\Release\CUSTOM-iMANTRA-BL.dll" />
+    <Content Include="bin\Release\CUSTOM-iMANTRA-BL.pdb" />
+    <Content Include="bin\Release\CUSTOM-iMANTRA.dll" />
+    <Content Include="bin\Release\CUSTOM-iMANTRA.pdb" />
+    <Content Include="bin\Release\icudt40.dll" />
+    <Content Include="bin\Release\icuin40.dll" />
+    <Content Include="bin\Release\icuuc40.dll" />
+    <Content Include="bin\Release\iDARTCOM.dll" />
+    <Content Include="bin\Release\iDARTCOM.pdb" />
+    <None Include="bin\Release\IMAGE\ajax-loader.gif" />
+    <Content Include="bin\Release\iMANTRA.exe" />
+    <Content Include="bin\Release\iMANTRA.pdb" />
+    <Content Include="bin\Release\iMANTRA.vshost.exe" />
+    <Content Include="bin\Release\iMANTRA_BL.dll" />
+    <Content Include="bin\Release\iMANTRA_BL.pdb" />
+    <Content Include="bin\Release\iMANTRA_DL.dll" />
+    <Content Include="bin\Release\iMANTRA_DL.pdb" />
+    <Content Include="bin\Release\iMANTRA_IL.dll" />
+    <Content Include="bin\Release\iMANTRA_IL.pdb" />
+    <Content Include="bin\Release\iMANTRA_iniL.dll" />
+    <Content Include="bin\Release\iMANTRA_iniL.pdb" />
+    <Content Include="bin\Release\infragistics.win.ultrawintabcontrol.v3.dll" />
+    <Content Include="bin\Release\INIFileParser.dll" />
+    <Content Include="bin\Release\INODE_ENCRYPTION.xml" />
+    <Content Include="bin\Release\Ionic.Zip.dll" />
+    <Content Include="bin\Release\JavaScriptCore.dll" />
+    <Content Include="bin\Release\libcurl.dll" />
+    <Content Include="bin\Release\libeay32.dll" />
+    <Content Include="bin\Release\libexslt.dll" />
+    <Content Include="bin\Release\libxml2.dll" />
+    <Content Include="bin\Release\libxslt.dll" />
+    <Content Include="bin\Release\License.dll" />
+    <Content Include="bin\Release\License.pdb" />
+    <Content Include="bin\Release\objc.dll" />
+    <Content Include="bin\Release\ORG_LICENSE.dll" />
+    <Content Include="bin\Release\ORG_LICENSE.pdb" />
+    <Content Include="bin\Release\pthreadVC2.dll" />
+    <Content Include="bin\Release\SQLite3.dll" />
+    <Content Include="bin\Release\ssleay32.dll" />
+    <Content Include="bin\Release\WebKit.dll" />
+    <Content Include="bin\Release\WebKit.Interop.dll" />
+    <Content Include="bin\Release\WebKitBrowser.dll" />
+    <Content Include="bin\Release\WebKitBrowserTest.exe" />
+    <Content Include="bin\Release\WebToolKit.dll" />
+    <Content Include="bin\Release\WebToolKit.pdb" />
+    <Content Include="bin\Release\WEB_LICENSE_deploy.dll" />
+    <Content Include="CustomGrid.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CUSTOM-iMANTRA", "CUSTOM-iMANTRA\CUSTOM-iMANTRA.csproj", "{2B18F215-854D-4833-A50C-48D0226CDE23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CUSTOM-iMANTRA-BL", "CUSTOM-iMANTRA-BL\CUSTOM-iMANTRA-BL.csproj", "{15FFD792-1703-4ACA-B23D-C28500B5147C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B18F215-854D-4833-A50C-48D0226CDE23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B18F215-854D-4833-A50C-48D0226CDE23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B18F215-854D-4833-A50C-48D0226CDE23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B18F215-854D-4833-A50C-48D0226CDE23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15FFD792-1703-4ACA-B23D-C28500B5147C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15FFD792-1703-4ACA-B23D-C28500B5147C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15FFD792-1703-4ACA-B23D-C28500B5147C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15FFD792-1703-4ACA-B23D-C28500B5147C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+1. Had some problem while creating company(if i input less details)	
+2. not getting Transaction list in Transaction setting
+3. issues with software's Max,min button
+4. Financial Year at the top spelling wrong
+5. Unable to edit many things in Trans Settings
+6. user creation - not saving
+7. Roles Mapping - Not getting newly created role
+8. Cursor not visible in PRoduct Name Field
+9. incomplete chapter no list
+10. Chapter no mandatory - not required
+11. range mandatory - not required
+12. Locate form - unstable
+13. Customer Master f2 - not working 
+14. vendor master type disable and unable to save entries --done

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Orgnization>
+  <comp_id>1</comp_id>
+  <Comp_nm>TRADING</Comp_nm>
+  <Add1 />
+  <Add2 />
+  <Add3 />
+  <area_nm />
+  <zone_nm />
+  <city_nm />
+  <zip />
+  <state_id>13</state_id>
+  <country_id />
+  <state_nm>Karnataka</state_nm>
+  <country_nm />
+  <Email />
+  <ecc_no />
+  <Fin_yr>2013-2014</Fin_yr>
+  <module_cd>Ou71spYZCBw4leFyqRcgLg==</module_cd>
+  <module_nm>BTRD</module_nm>
+  <comp_type>MAIN-COMPANY</comp_type>
+  <noofusers>10</noofusers>
+  <product>iMANTRA</product>
+  <prod_version>5.0.0</prod_version>
+  <mac_id>4C:72:B9:2F:56:3A</mac_id>
+  <server_ip>192.168.1.103</server_ip>
+  <server_nm>INODE-SHA</server_nm>
+  <motherboard_id>BFEBFBFF000206A7</motherboard_id>
+</Orgnization>
